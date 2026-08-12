@@ -41,10 +41,14 @@ Mostly Python and TypeScript, and I stay involved through deployment — Docker,
 ### What I've been building
 
 **AI assistant platform for business** — *Wikilect*<br>
-Assistants that answer from a company's own knowledge base and live inside the channels its customers already use. I built the retrieval layer on PostgreSQL/pgvector (semantic search combined with weighted full-text), token-level response streaming over Django Channels, and multimodal input — images for vision models, voice notes transcribed to text. Owned 11 integration channels end to end — Telegram, VK, MAX, Bitrix24, JivoChat, HelpDeskEddy, PACT, Chat2Desk — from webhooks and async task pipelines to public OpenAPI docs. The platform serves many client organizations from one deployment, and I designed that isolation layer from scratch.
+Assistants that answer from a company's own knowledge base and live inside the channels its customers already use.
+
+I built the retrieval layer on PostgreSQL/pgvector (semantic search combined with weighted full-text), LangChain tool-calling agents with context-window trimming, and a multi-provider LLM layer — OpenAI, Ollama, vLLM, LiteLLM — that lets models be swapped without touching product code. Responses stream token by token over Django Channels, and input is multimodal: images normalized for vision models, voice notes transcribed with Yandex SpeechKit.
+
+I also owned 11 integration channels end to end — Telegram, VK, MAX, Bitrix24, JivoChat, HelpDeskEddy, PACT, Chat2Desk — from webhooks and async task pipelines to public OpenAPI docs, with Sentry and Langfuse tracing so it's possible to see what a model actually did on a real conversation. The platform serves many client organizations from one deployment, and I designed that isolation layer from scratch.
 
 **Visual builder for AI agent workflows** — *Wikiflow*<br>
-A node-based editor where a business assembles its own LLM pipelines instead of asking engineers for each change. I contributed components to the execution engine: a universal node for sending messages to any connected integration, search and embedding nodes, image handling for vision models, and voice transcription — plus the release path to Kubernetes via Helm and CI.
+A node-based editor where a business assembles its own LLM pipelines instead of asking engineers for each change. I contributed components to the execution engine: a universal node for sending messages to any connected integration, configurable search and embedding nodes, image handling for vision models, and voice transcription — each covered with pytest and shipped to Kubernetes through Helm and CI.
 
 **News &amp; media intelligence platform** — *Port by Elemento*<br>
 Media-monitoring dashboards in React 18 + TypeScript with multi-tenant filtering and per-client branding, on a DRF/PostgreSQL backend with automated PDF reporting. Gemini API for summarization and localization. Shipped on Cloud Run via Docker and GitHub Actions.
