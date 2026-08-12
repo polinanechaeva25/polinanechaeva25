@@ -2,7 +2,8 @@
 
 <p align="center">
   <b>Software Engineer — Backend &amp; AI Systems</b><br>
-  Multi-tenant SaaS · LLM/RAG pipelines · real-time services<br>
+  I build AI products for business: assistants over company knowledge,<br>
+  agent workflows, and the integrations that connect them to real channels<br>
   <sub>Ecuador — open to remote</sub>
 </p>
 
@@ -15,9 +16,9 @@
 
 ### About
 
-Backend engineer with 3+ years in production. I build multi-tenant SaaS platforms and the LLM infrastructure that sits inside them: retrieval pipelines, tool-calling agents, streaming chat, and the integration layer that connects all of it to the outside world. Mostly Python and TypeScript, and I stay involved through deployment — Docker, Kubernetes, CI/CD.
+Backend engineer with 3+ years in production, working on AI systems that companies actually run their operations on: assistants that answer from a business's own knowledge base, agent workflows that automate the steps around them, and the integration layer that plugs all of it into the messengers and CRMs people already use.
 
-I like problems where correctness matters: tenant isolation, retrieval quality, and the performance work that shows up once real traffic arrives.
+Mostly Python and TypeScript, and I stay involved through deployment — Docker, Kubernetes, CI/CD. I like the parts where correctness matters: retrieval quality, tenant isolation, and the performance work that only shows up once real traffic arrives.
 
 ### Tech stack
 
@@ -39,8 +40,11 @@ I like problems where correctness matters: tenant isolation, retrieval quality, 
 
 ### What I've been building
 
-**Multi-tenant AI assistant SaaS** — *Wikilect*<br>
-Designed the tenancy layer from scratch (row-level isolation, subdomain resolution, custom Django auth backend) and the RAG stack on PostgreSQL/pgvector that combines semantic and weighted full-text search. Token-level response streaming over Django Channels. Owned 11 integration channels end to end, from webhooks to public OpenAPI docs.
+**AI assistant platform for business** — *Wikilect*<br>
+Assistants that answer from a company's own knowledge base and live inside the channels its customers already use. I built the retrieval layer on PostgreSQL/pgvector (semantic search combined with weighted full-text), token-level response streaming over Django Channels, and multimodal input — images for vision models, voice notes transcribed to text. Owned 11 integration channels end to end — Telegram, VK, MAX, Bitrix24, JivoChat, HelpDeskEddy, PACT, Chat2Desk — from webhooks and async task pipelines to public OpenAPI docs. The platform serves many client organizations from one deployment, and I designed that isolation layer from scratch.
+
+**Visual builder for AI agent workflows** — *Wikiflow*<br>
+A node-based editor where a business assembles its own LLM pipelines instead of asking engineers for each change. I contributed components to the execution engine: a universal node for sending messages to any connected integration, search and embedding nodes, image handling for vision models, and voice transcription — plus the release path to Kubernetes via Helm and CI.
 
 **News &amp; media intelligence platform** — *Port by Elemento*<br>
 Media-monitoring dashboards in React 18 + TypeScript with multi-tenant filtering and per-client branding, on a DRF/PostgreSQL backend with automated PDF reporting. Gemini API for summarization and localization. Shipped on Cloud Run via Docker and GitHub Actions.
