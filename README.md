@@ -4,7 +4,7 @@
   <b>Software Engineer — Backend &amp; AI Systems</b><br>
   I build AI products for business: assistants over company knowledge,<br>
   agent workflows, and the integrations that connect them to real channels<br>
-  <sub>Ecuador — open to remote</sub>
+  <sub>Quito, Ecuador — open to remote</sub>
 </p>
 
 <p align="center">
