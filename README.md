@@ -20,7 +20,7 @@ Backend engineer with 3+ years in production, working on AI systems that compani
 
 Mostly Python and TypeScript, and I stay involved through deployment — Docker, Kubernetes, CI/CD. I like the parts where correctness matters: retrieval quality, tenant isolation, and the performance work that only shows up once real traffic arrives.
 
-Day to day I work in private repositories on a company-hosted GitLab — around 500 commits there over the past year — so the contribution graph on this profile reflects very little of it. The projects below are where that work went.
+Almost all of that work lives in private company repositories, so the graph here shows the volume but not the code. The projects below are what those commits went into.
 
 ### Tech stack
 
